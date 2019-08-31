@@ -17,44 +17,7 @@ namespace JustFun
 
         static void Main(string[] args)
         {
-            int dividend = -2147483648; //делимое
-            int divisor = 1; //делитель
-
-            //only one edge case
-            if (dividend == int.MinValue && divisor == -1)
-            {
-                Console.WriteLine(int.MaxValue);
-                return;
-            }
-
-
-            //True ^ True = False => 1 || True ^ False = False => -1
-            int sign = ((dividend < 0) ^ (divisor < 0)) ? -1 : 1;
-
-            long a = Math.Abs((long)dividend);
-            long b = Math.Abs((long)divisor);
-
-            //Console.WriteLine((divisor << 31));
-
-
-            int quotient = 0;
-
-
-            while (a - b >= 0)
-            {
-                int temp = 0; // 2^0 = 1
-                while (a - (b << 1 << temp) >= 0)
-                {
-                    temp++;
-                }
-                quotient += (1 << temp);
-                a -= (b << temp);
-            }
-
-
-
-            Console.WriteLine(sign * quotient);
-            return;
+            
 
 
             #region NewYearPresent
@@ -142,9 +105,38 @@ namespace JustFun
 
         }
 
-        static int DivideIntegers()
+        static int DivideIntegers(int dividend, int divisor)
         {
+            //only one edge case
+            if (dividend == int.MinValue && divisor == -1)
+            {
+                return int.MaxValue;
+            }
 
+
+            //True ^ True = False => 1 || True ^ False = False => -1
+            int sign = ((dividend < 0) ^ (divisor < 0)) ? -1 : 1;
+
+            long a = Math.Abs((long)dividend);
+            long b = Math.Abs((long)divisor);
+
+            int quotient = 0;
+
+
+            while (a - b >= 0)
+            {
+                int temp = 0; // 2^0 = 1
+                while (a - (b << 1 << temp) >= 0)
+                {
+                    temp++;
+                }
+                quotient += (1 << temp);
+                a -= (b << temp);
+            }
+
+
+
+            return sign* quotient;
         }
 
         static bool isPowerOfTwo(int x)
