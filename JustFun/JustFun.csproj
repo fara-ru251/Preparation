@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Add2NumAsLList.cs" />
     <Compile Include="Models\AlternateArray.cs" />
+    <Compile Include="Models\BeerThief.cs" />
     <Compile Include="Models\BinaryTree.cs" />
+    <Compile Include="Models\InsertionSortList.cs" />
     <Compile Include="Models\LexicoHelper.cs" />
+    <Compile Include="Models\ListNode.cs" />
     <Compile Include="Models\Node.cs" />
+    <Compile Include="Models\PartitionList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
