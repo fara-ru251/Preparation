@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Nito.Collections.Deque, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Collections.Deque.1.0.4\lib\netstandard2.0\Nito.Collections.Deque.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,20 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ISomeInterface.cs" />
+    <Compile Include="Interfaces\SomeClass.cs" />
+    <Compile Include="Interfaces\SomeInterfaceImplementation.cs" />
+    <Compile Include="Interfaces\SomeStaticClass.cs" />
+    <Compile Include="Models\1FITLimits.cs" />
+    <Compile Include="Models\ACMP\Ladder.cs" />
     <Compile Include="Models\Add2NumAsLList.cs" />
     <Compile Include="Models\AlternateArray.cs" />
     <Compile Include="Models\BeerThief.cs" />
     <Compile Include="Models\BinaryTree.cs" />
+    <Compile Include="Models\Codeforces\RectangularLand.cs" />
+    <Compile Include="Models\Codeforces\Shawerma.cs" />
     <Compile Include="Models\InsertionSortList.cs" />
+    <Compile Include="Models\Interviewbit\AggressiveCows.cs" />
+    <Compile Include="Models\Interviewbit\AllParentheses.cs" />
+    <Compile Include="Models\Interviewbit\InfixToPostfix.cs" />
+    <Compile Include="Models\Interviewbit\TrappedRainWater.cs" />
+    <Compile Include="Models\LargestRectangleInHistogram.cs" />
     <Compile Include="Models\LexicoHelper.cs" />
     <Compile Include="Models\ListNode.cs" />
+    <Compile Include="Models\MatchingStates.cs" />
+    <Compile Include="Models\MaxUnsortedSubarray.cs" />
+    <Compile Include="Models\NearestSmallerElement.cs" />
     <Compile Include="Models\Node.cs" />
     <Compile Include="Models\PartitionList.cs" />
+    <Compile Include="Models\ReversePolishNotation.cs" />
+    <Compile Include="Models\SlidingWindow.cs" />
+    <Compile Include="Models\BinarySearchTree.cs" />
+    <Compile Include="Models\TestInterfacesApp\Employee.cs" />
+    <Compile Include="Models\TestInterfacesApp\EmployeeCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

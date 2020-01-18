@@ -1,4 +1,9 @@
-﻿using JustFun.Models;
+﻿using JustFun.Interfaces;
+using JustFun.Models;
+using JustFun.Models.ACMP;
+using JustFun.Models.Codeforces;
+using JustFun.Models.Interviewbit;
+using JustFun.Models.TestInterfacesApp;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -6,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace JustFun
@@ -17,10 +23,14 @@ namespace JustFun
 
         static void Main(string[] args)
         {
-            string str = "bar(qwe(rty))asd";
+            //int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => int.Parse(arTemp));
 
-            string result = ReverseParentheses(str);
-            Console.WriteLine(result);
+          
+
+
+
+            
+
 
             return;
 
@@ -52,7 +62,6 @@ namespace JustFun
 
             //return;
             #endregion
-
 
             #region NewYearPresent
 
@@ -139,7 +148,6 @@ namespace JustFun
 
         }
 
-
         static string ReverseParentheses(string str)
         {
             int begin = 0;
@@ -162,7 +170,7 @@ namespace JustFun
 
                     var revstr = substr.Reverse();
 
-                    return ReverseParentheses(str.Substring(0, begin) + string.Join("", revstr) + str.Substring( end + 1));
+                    return ReverseParentheses(str.Substring(0, begin) + string.Join("", revstr) + str.Substring(end + 1));
                 }
             }
 
@@ -270,6 +278,8 @@ namespace JustFun
         static void Shooting(int[] arr)
         {
             int[] idx = new int[arr.Length];
+
+
 
             for (int i = 0; i < arr.Length; i++)
             {
@@ -1017,6 +1027,7 @@ namespace JustFun
 
             return A.Length;
         }
+
         static int gcd(int A, int B)
         {
             int T;
