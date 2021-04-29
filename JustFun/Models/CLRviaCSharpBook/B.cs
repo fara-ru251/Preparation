@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JustFun.Interfaces
+namespace JustFun.Models.CLRviaCSharpBook
 {
-    public interface ISomeInterface
+    internal class B // Base class
     {
-       SomeClass GetSomeClass();
+    }
+
+    internal class D : B // Derived class
+    {
     }
 }

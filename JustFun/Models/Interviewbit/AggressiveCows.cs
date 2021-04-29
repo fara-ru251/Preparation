@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JustFun.Models.Interviewbit
 {
-    public class AggressiveCows
+    class AggressiveCows
     {
         public static int Arrange(List<int> arr, int cow_count)
         {

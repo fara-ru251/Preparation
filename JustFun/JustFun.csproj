@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,55 +35,153 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.10.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.10.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="Nito.Collections.Deque, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.Collections.Deque.1.0.4\lib\netstandard2.0\Nito.Collections.Deque.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asynchrony\ProgressReporting\AdvancedProgressReporting.cs" />
+    <Compile Include="Asynchrony\ProgressReporting\SimpleProgressReportWithCallback.cs" />
+    <Compile Include="Facade\AuthorizationService.cs" />
+    <Compile Include="Facade\AutenticateService.cs" />
+    <Compile Include="Facade\Interfaces\IAutenticateService.cs" />
+    <Compile Include="Facade\Interfaces\IAuthorizationService.cs" />
+    <Compile Include="Facade\LoginFacade.cs" />
     <Compile Include="Interfaces\ISomeInterface.cs" />
     <Compile Include="Interfaces\SomeClass.cs" />
     <Compile Include="Interfaces\SomeInterfaceImplementation.cs" />
     <Compile Include="Interfaces\SomeStaticClass.cs" />
+    <Compile Include="Leetcode\No1480_RunningSumOf1dArray.cs" />
+    <Compile Include="Leetcode\No1_TwoSum.cs" />
+    <Compile Include="Leetcode\No7_ReverseInteger.cs" />
     <Compile Include="Models\1FITLimits.cs" />
     <Compile Include="Models\ACMP\Ladder.cs" />
     <Compile Include="Models\Add2NumAsLList.cs" />
     <Compile Include="Models\AlternateArray.cs" />
+    <Compile Include="Models\ArrayPartitionI.cs" />
+    <Compile Include="Models\AshuraAndKingdom.cs" />
     <Compile Include="Models\BeerThief.cs" />
     <Compile Include="Models\BinaryTree.cs" />
+    <Compile Include="Models\CheckArrayFormationThroughConcatenation.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\B.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\BaseAbstractClass.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter10\BitArray.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter11\Fax.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter11\MailManager.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter11\NewMailEventArgs.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter12_Generics\DictionaryStringKey.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter12_Generics\Node.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter14_String\CharTest.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter15_BitFlags\BitFlags.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\Chapter5\StaticMemberDynamicWrapper.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\InlineArray.cs" />
     <Compile Include="Models\Codeforces\RectangularLand.cs" />
     <Compile Include="Models\Codeforces\Shawerma.cs" />
+    <Compile Include="Models\CoinChangeII.cs" />
+    <Compile Include="Models\CLRviaCSharpBook\DelegatesList.cs" />
+    <Compile Include="Models\DailyEventSchedule.cs" />
+    <Compile Include="Models\DungeonGame.cs" />
+    <Compile Include="Models\FindMaxWithoutComparison.cs" />
+    <Compile Include="Models\FunNumbers.cs" />
+    <Compile Include="Models\HeapSort.cs" />
+    <Compile Include="Models\ICPC.cs" />
+    <Compile Include="Models\IncreasingOrderSearchTree.cs" />
+    <Compile Include="Models\InsertionSort.cs" />
     <Compile Include="Models\InsertionSortList.cs" />
+    <Compile Include="Models\InterestingMaxWindow.cs" />
     <Compile Include="Models\Interviewbit\AggressiveCows.cs" />
     <Compile Include="Models\Interviewbit\AllParentheses.cs" />
+    <Compile Include="Models\Interviewbit\AllParenthesesII.cs" />
+    <Compile Include="Models\Interviewbit\BinarySubarraysWithSum.cs" />
+    <Compile Include="Models\Interviewbit\Combinations.cs" />
+    <Compile Include="Models\Interviewbit\CombinationSum.cs" />
+    <Compile Include="Models\Interviewbit\ContainsDuplicateII.cs" />
+    <Compile Include="Models\Interviewbit\FindNumbersWithEvenNumberOfDigits.cs" />
+    <Compile Include="Models\Interviewbit\FruitIntoBaskets.cs" />
+    <Compile Include="Models\Interviewbit\GetEqualSubstringsWithinBudget.cs" />
+    <Compile Include="Models\Interviewbit\GrumpyBookstoreOwner.cs" />
+    <Compile Include="Models\Interviewbit\IncreasingArray.cs" />
     <Compile Include="Models\Interviewbit\InfixToPostfix.cs" />
+    <Compile Include="Models\Interviewbit\KthPermutationSequence.cs" />
+    <Compile Include="Models\Interviewbit\LongestRepeatingCharacterReplacement.cs" />
+    <Compile Include="Models\Interviewbit\LongestSubstringWithoutRepeatingCharacters.cs" />
+    <Compile Include="Models\Interviewbit\LongestTurbulentSubarray.cs" />
+    <Compile Include="Models\Interviewbit\MaxConsecutiveOnesIII.cs" />
+    <Compile Include="Models\Interviewbit\MaxFrequencyStack.cs" />
+    <Compile Include="Models\Interviewbit\MaximumSumOfTwoNonOverlappingSubarrays.cs" />
+    <Compile Include="Models\Interviewbit\MergeSortedArray.cs" />
+    <Compile Include="Models\Interviewbit\MinimumSizeSubarraySum.cs" />
+    <Compile Include="Models\Interviewbit\MinimumTimeVisitingAllPoints.cs" />
+    <Compile Include="Models\Interviewbit\NUniqueIntegersSumUpToZero.cs" />
+    <Compile Include="Models\Interviewbit\PalindromePartitioning.cs" />
+    <Compile Include="Models\Interviewbit\PermutationInString.cs" />
+    <Compile Include="Models\Interviewbit\QueensThatCanAttackKing.cs" />
+    <Compile Include="Models\Interviewbit\ReverseStackWithRecursion.cs" />
+    <Compile Include="Models\Interviewbit\RotateArray.cs" />
+    <Compile Include="Models\Interviewbit\ShortestUnsortedContinuousSubarray.cs" />
+    <Compile Include="Models\Interviewbit\SortArrayByParityII.cs" />
+    <Compile Include="Models\Interviewbit\Subset.cs" />
+    <Compile Include="Models\Interviewbit\SubsetsII.cs" />
+    <Compile Include="Models\Interviewbit\ToeplitzMatrix.cs" />
     <Compile Include="Models\Interviewbit\TrappedRainWater.cs" />
+    <Compile Include="Models\Interviewbit\TrappingRainWater.cs" />
+    <Compile Include="Models\InvertBinaryTree.cs" />
     <Compile Include="Models\LargestRectangleInHistogram.cs" />
+    <Compile Include="Models\LetterPhone.cs" />
     <Compile Include="Models\LexicoHelper.cs" />
     <Compile Include="Models\ListNode.cs" />
+    <Compile Include="Models\LongestRepeatingCharacterReplacement.cs" />
+    <Compile Include="Models\MakeTwoArraysEqualByReversingSubarrays.cs" />
     <Compile Include="Models\MatchingStates.cs" />
+    <Compile Include="Models\MaximumNumberVowelsInSubstringOfGivenLength.cs" />
     <Compile Include="Models\MaxUnsortedSubarray.cs" />
+    <Compile Include="Models\MyQuickSort.cs" />
     <Compile Include="Models\NearestSmallerElement.cs" />
     <Compile Include="Models\Node.cs" />
     <Compile Include="Models\PartitionList.cs" />
+    <Compile Include="Models\QueueReconstructionByHeight.cs" />
+    <Compile Include="Models\RevealCardsInIncreasingOrder.cs" />
     <Compile Include="Models\ReversePolishNotation.cs" />
+    <Compile Include="Models\ReverseString.cs" />
     <Compile Include="Models\SlidingWindow.cs" />
     <Compile Include="Models\BinarySearchTree.cs" />
+    <Compile Include="Models\SquaresOfSortedArray.cs" />
     <Compile Include="Models\TestInterfacesApp\Employee.cs" />
     <Compile Include="Models\TestInterfacesApp\EmployeeCollection.cs" />
+    <Compile Include="Models\TwoCityScheduling.cs" />
+    <Compile Include="Models\WorkingWithXML\MyXMLManipulation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlidingWindow\MaximumPointsYouCanObtainFromCards.cs" />
+    <Compile Include="Sorting\MergeSort.cs" />
+    <Compile Include="Sorting\QuickSortPivotLastElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\CLRviaCSharpBook\Сhapter6\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

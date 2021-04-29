@@ -1,18 +1,33 @@
-﻿using JustFun.Interfaces;
+﻿using JustFun.Asynchrony.ProgressReporting;
+using JustFun.Facade;
+using JustFun.Facade.Interfaces;
+using JustFun.Interfaces;
+using JustFun.Leetcode;
 using JustFun.Models;
 using JustFun.Models.ACMP;
+using JustFun.Models.CLRviaCSharpBook;
+using JustFun.Models.CLRviaCSharpBook.Chapter10;
+using JustFun.Models.CLRviaCSharpBook.Chapter11;
+using JustFun.Models.CLRviaCSharpBook.Chapter12_Generics;
+using JustFun.Models.CLRviaCSharpBook.Chapter15_BitFlags;
+using JustFun.Models.CLRviaCSharpBook.Chapter5;
 using JustFun.Models.Codeforces;
 using JustFun.Models.Interviewbit;
 using JustFun.Models.TestInterfacesApp;
+using JustFun.SlidingWindow;
+using JustFun.Sorting;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using static JustFun.Models.DailyEventSchedule;
+using GeneralNode = JustFun.Models.CLRviaCSharpBook.Chapter12_Generics.Node;
 
 namespace JustFun
 {
@@ -25,12 +40,15 @@ namespace JustFun
         {
             //int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arTemp => int.Parse(arTemp));
 
-          
+            //[2,1,5,6,0,9,5,0,3,8]
+            //4
+            //3
 
+            var no1031 = new No1031_MaximumSumOfTwoNonOverlappingSubarrays();
 
+            var ans = no1031.MaxSumTwoNoOverlap(new int[] { 2, 1, 5, 6, 0, 9, 5, 0, 3, 8 }, 4, 3);
 
-            
-
+            Console.ReadKey();
 
             return;
 
@@ -147,6 +165,8 @@ namespace JustFun
             #endregion
 
         }
+
+
 
         static string ReverseParentheses(string str)
         {
@@ -1063,6 +1083,5 @@ namespace JustFun
         public int intellect { get; set; }
         public int experience { get; set; }
     }
-
 }
 

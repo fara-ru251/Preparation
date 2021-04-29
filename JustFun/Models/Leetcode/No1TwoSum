@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JustFun.Interfaces
+namespace JustFun.Models.Leetcode
 {
-    public interface ISomeInterface
+    class No
     {
-       SomeClass GetSomeClass();
     }
 }
